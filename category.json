@@ -1,0 +1,26 @@
+[
+  {
+    "category": "business",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  },
+  {
+    "category": "entertainment",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  },
+  {
+    "category": "health",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  },
+  {
+    "category": "science",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  },
+  {
+    "category": "sports",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  },
+  {
+    "category": "technology",
+    "imageBackgroundUrl": "https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials.jpg"
+  }
+]

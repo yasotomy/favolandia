@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit JSON Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        textarea {
+            font-family: monospace;
+            font-size: 12px;
+            height: 400px;
+            resize: vertical;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Edit JSON Data</h1>
+        <form action="/edit-json" method="post">
+            <div class="form-group">
+                <label for="jsonContent">JSON Data:</label>
+                <textarea class="form-control" name="jsonContent" rows="10"><%- JSON.stringify(jsonData, null, 2) %></textarea>
+            </div>
+            <button class="btn btn-primary">Save Changes</button>
+        </form>
+        <a class="btn btn-link mt-4" href="/data">Back to Data</a>
+    </div>
+</body>
+</html>

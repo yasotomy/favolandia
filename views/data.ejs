@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Bootstrap JavaScript and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <h1 class="my-4">Data</h1>
+    <% if (user) { %>
+        <p>Welcome, <%= user.username %>!</p>
+        <a href="/logout" class="btn btn-primary">Logout</a>
+    <% } else { %>
+        <p>Please <a href="/login">login</a> or <a href="/register">register</a> to see the data.</p>
+    <% } %>
+ 
+    <a href="/edit-json" class="btn btn-secondary">Edit JSON</a>
+    <form method="POST" action="/add-data" class="my-4" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="urlToImage">Image:</label>
+            <input type="file" id="urlToImage" name="imageFile" class="form-control" required>
+          </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" class="form-control" required>
+                <option value="" disabled selected>Select category</option>
+                <option value="Arts & Entertainment">Arts & Entertainment</option>
+                <option value="Business">Business</option>
+                <option value="Education">Education</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Science & Technology">Science & Technology</option>
+                <option value="Sports">Sports</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Data</button>
+    </form>
+</body>
+</html>
+

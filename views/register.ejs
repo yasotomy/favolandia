@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Add this line at the beginning of your register.ejs file -->
+<% if (locals.message) { %><p class="alert alert-danger"><%= message %></p><% } %>
+
+    <div class="container">
+        <div class="card mx-auto mt-5" style="max-width: 500px;">
+            <div class="card-header">
+                <h1 class="text-center">Registrazione</h1>
+            </div>
+            <div class="card-body">
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label for="username">Nome utente:</label>
+                        <input type="text" class="form-control" name="username" id="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- Add this input field inside the register.ejs form -->
+                        <label for="code">Registration Code:</label>
+                         <input type="text" id="code" class="form-control" name="code" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Registrati</button>
+                </form>
+                <p class="mt-3">Hai già un account? <a href="/login">Accedi</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
